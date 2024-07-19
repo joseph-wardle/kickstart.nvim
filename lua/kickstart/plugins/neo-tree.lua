@@ -14,7 +14,21 @@ return {
     { '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
   },
   opts = {
+    close_if_last_window = true,
+
     filesystem = {
+      filtered_items = {
+        hide_dotfiles = false,
+        hide_gitignored = true,
+        always_show = {
+          '.gitignore',
+        },
+        never_show = {
+          '.DS_Store',
+          'thumbs.db',
+        },
+      },
+
       window = {
         mappings = {
           ['\\'] = 'close_window',
